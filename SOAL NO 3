@@ -1,1 +1,80 @@
+# 1. contoh function and recursive di bahasa pemrograman python
 
+class product():
+    def factorial (self, number):
+        if number==1:
+            return 1
+        else:
+            return(number*self.factorial(number-1))
+"""
+product= product()
+product.factorial(158)
+print(product.factorial(158))
+"""
+
+"""
+#nomor 2 itu function of Exceptipn Handling pada bahasa pemrograman python
+def pembagian(number,pembagi):
+    try:
+         result=number/pembagi
+         print (result)
+    except:
+        print("Error : pembagi tidak boleh 0.")
+    
+
+pembagian (172,0)
+
+
+
+
+
+"""
+
+# GUI -> Graphical User Interface
+import tkinter as tk
+from tkinter import ttk
+from tkinter.messagebox import showinfo
+# Init
+window = tk.Tk()
+window.configure(bg="pink")
+window.geometry("900x600")
+window.resizable(False,False)
+window.title("Data Diri")
+# Variabel dan Fungsi
+NAMA_DEPAN = tk.StringVar()
+NAMA_BELAKANG = tk.StringVar()
+NIM = tk.IntVar()
+
+def tombol_click():
+    '''fungsi ini akan dipanggil oleh tombol'''
+    pesan = f"ANNYOENG {NAMA_DEPAN.get()} {NAMA_BELAKANG.get()} dengan NIM {NIM.get()} yang gumushhhh^^!"
+    showinfo(title="hellow !",message=pesan)
+
+# frame input
+input_frame = ttk.Frame(window)
+# penempatan Grid, Pack, Place
+input_frame.pack(padx=10,pady=10,fill="x",expand=True)
+# komponen-komponen
+# 1. Label nama depan
+nama_depan_label = ttk.Label(input_frame,text="Nama Depan:")
+nama_depan_label.pack(padx=10,fill="x",expand=True)
+# 2. entry nama depan
+nama_depan_entry = ttk.Entry(input_frame,textvariable=NAMA_DEPAN)
+nama_depan_entry.pack(padx=10,fill="x",expand=True)
+# 3. Label nama belakang
+nama_belakang_label = ttk.Label(input_frame,text="Nama belakang:")
+nama_belakang_label.pack(padx=10,fill="x",expand=True)
+# 4. entry nama belakang
+nama_belakang_entry = ttk.Entry(input_frame,textvariable=NAMA_BELAKANG)
+nama_belakang_entry.pack(padx=10,fill="x",expand=True)
+# 5. Label nim
+nim_label = ttk.Label(input_frame,text="NIM:")
+nim_label.pack(padx=10,fill="x",expand=True)
+# 6. entry nim
+nim_entry = ttk.Entry(input_frame,textvariable=NIM)
+nim_entry.pack(padx=10,fill="x",expand=True)
+# 7. Tombol
+tombol_sapa = ttk.Button(input_frame,text="Tampilkan",command=tombol_click)
+tombol_sapa.pack(fill='x',expand=True,padx=10,pady=10)
+# Main Loop window
+window.mainloop()
