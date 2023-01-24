@@ -1,1 +1,12 @@
+# 1. contoh function and recursive di bahasa pemrograman python
 
+class product():
+    def factorial (self, number):
+        if number==1:
+            return 1
+        else:
+            return(number*self.factorial(number-1))
+
+product= product()
+product.factorial(158)
+print(product.factorial(158))
