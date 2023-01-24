@@ -1,35 +1,3 @@
-# 1. contoh function and recursive di bahasa pemrograman python
-
-class product():
-    def factorial (self, number):
-        if number==1:
-            return 1
-        else:
-            return(number*self.factorial(number-1))
-"""
-product= product()
-product.factorial(158)
-print(product.factorial(158))
-"""
-
-"""
-#nomor 2 itu function of Exceptipn Handling pada bahasa pemrograman python
-def pembagian(number,pembagi):
-    try:
-         result=number/pembagi
-         print (result)
-    except:
-        print("Error : pembagi tidak boleh 0.")
-    
-
-pembagian (172,0)
-
-
-
-
-
-"""
-
 # GUI -> Graphical User Interface
 import tkinter as tk
 from tkinter import ttk
