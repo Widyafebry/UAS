@@ -1,1 +1,10 @@
+#nomor 2 itu function of Exceptipn Handling pada bahasa pemrograman python
+def pembagian(number,pembagi):
+    try:
+         result=number/pembagi
+         print (result)
+    except:
+        print("Error : pembagi tidak boleh 0.")
+    
 
+pembagian (172,0)
